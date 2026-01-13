@@ -1,0 +1,178 @@
+/* Unique Courses Section */
+.courses-section {
+  position: relative;
+  padding: 6rem 0;
+  background-color: var(--bg-dark); /* Dark theme for contrast */
+  overflow: hidden;
+  color: var(--text-white);
+}
+
+.courses-bg-glow {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(75, 0, 130, 0.4) 0%, rgba(0,0,0,0) 70%);
+  z-index: 0;
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.courses-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.courses-container-unique {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glassmorphic Card */
+.course-card-unique {
+  position: relative;
+  border-radius: 20px;
+  padding: 2px; /* For gradient border */
+  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: fadeUp 0.8s ease-out backwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.course-card-unique:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: linear-gradient(145deg, var(--secondary-color), var(--primary-color));
+}
+
+.card-glass-content {
+  background: rgba(20, 20, 25, 0.95); /* Nearly black background */
+  height: 100%;
+  padding: 2.5rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon Styling */
+.course-icon-wrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-icon-lg {
+  font-size: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.icon-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  filter: blur(25px);
+  opacity: 0.6;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.course-card-unique:hover .icon-glow {
+  background: var(--secondary-color);
+  width: 80px;
+  height: 80px;
+  opacity: 0.8;
+}
+
+/* Typography */
+.course-title-unique {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+}
+
+.course-desc-unique {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Footer & Button */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.course-batch {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.btn-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.course-card-unique:hover .btn-arrow {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+  transform: rotate(-45deg); /* Arrow points up-right */
+}
+
+/* Full Link Overlay */
+.card-full-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .courses-header {
+    margin-bottom: 2.5rem;
+  }
+}

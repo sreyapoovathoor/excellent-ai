@@ -1,0 +1,9 @@
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#0f0718;
+}
+:root{
+  --primary:#5b2b8b;
+  --gold:#f4c430;
+}
