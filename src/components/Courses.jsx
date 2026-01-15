@@ -1,13 +1,22 @@
 import React from 'react';
 import './Courses.css';
 import { siteData } from '../data/siteData';
+import { FaUserMd, FaDraftingCompass, FaBuilding, FaFlask, FaBookOpen, FaFilePdf } from 'react-icons/fa';
+import { BsEyeFill } from 'react-icons/bs';
+
+const iconMap = {
+    medical: <FaUserMd />,
+    engineering: <FaDraftingCompass />,
+    architecture: <FaBuilding />,
+    science: <FaFlask />,
+    books: <FaBookOpen />
+};
 
 const Courses = () => {
     const { courses } = siteData;
 
     return (
         <section id="courses" className="courses-section">
-            <div className="courses-bg-glow"></div>
             <div className="container">
                 <div className="courses-header">
                     <h2 className="section-title">Explore Our <span className="highlight">Programs</span></h2>
@@ -16,21 +25,28 @@ const Courses = () => {
 
                 <div className="courses-container-unique">
                     {courses.map((course, index) => (
-                        <div key={course.id} className="course-card-unique" style={{ animationDelay: `${index * 100}ms` }}>
+                        <div key={course.id} className="course-card-unique">
                             <div className="card-glass-content">
                                 <div className="course-icon-wrapper">
-                                    <span className="course-icon-lg">{course.icon}</span>
-                                    <div className="icon-glow"></div>
+                                    <span className="course-icon-lg">{iconMap[course.icon]}</span>
                                 </div>
                                 <h3 className="course-title-unique">{course.title}</h3>
                                 <p className="course-desc-unique">{course.description}</p>
 
-                                <div className="card-footer">
-                                    <span className="course-batch">Admissions Open</span>
-                                    <button className="btn-arrow">→</button>
+                                <div className="course-actions-grid">
+                                    <button className="btn-action-sm btn-outline">
+                                        <FaFilePdf /> Brochure
+                                    </button>
+                                    <button className="btn-action-sm btn-outline">
+                                        <BsEyeFill /> View
+                                    </button>
                                 </div>
 
-                                <a href="#contact" className="card-full-link" aria-label={`View ${course.title}`}></a>
+                                <div className="card-footer-modern">
+                                    <button className="btn-subscribe-full">
+                                        Subscribe Now
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     ))}

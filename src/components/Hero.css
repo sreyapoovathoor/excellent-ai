@@ -2,7 +2,9 @@
 .hero-modern {
   position: relative;
   min-height: 100vh;
-  padding-top: 100px; /* Space for fixed navbar */
+  min-height: 100vh;
+  /* padding-top: 100px; Removed since Navbar is sticky now */
+  display: flex;
   display: flex;
   align-items: center;
   background-color: var(--bg-light);

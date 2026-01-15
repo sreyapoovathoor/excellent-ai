@@ -1,20 +1,22 @@
 /* Modern Navbar Styles */
 .navbar {
-  position: fixed;
+  background: var(--primary-color); /* Solid background for sticky */
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   height: 90px;
-  background-color: transparent;
   transition: all var(--transition-normal);
   z-index: 1000;
   display: flex;
   align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .navbar.scrolled {
-  background: rgba(75, 0, 130, 0.85); /* Semi-transparent Primary */
-  backdrop-filter: blur(12px); /* Glassmorphism */
+  background: rgba(75, 0, 130, 0.95); /* Fallback */
+  background: color-mix(in srgb, var(--primary-color), transparent 5%); /* Modern Primary with slight transparency */
+  backdrop-filter: blur(15px); /* Stronger Glassmorphism */
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   height: 70px;

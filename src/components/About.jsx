@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
 import { siteData } from '../data/siteData';
+import aboutImage from '../assets/about_image.png';
 
 const About = () => {
     const { about } = siteData;
@@ -36,7 +37,7 @@ const About = () => {
                         <div className="image-frame-1"></div>
                         <div className="image-frame-2"></div>
                         <div className="about-img-wrapper">
-                            <img src={about.image} alt="About Institute" className="about-img" />
+                            <img src={aboutImage} alt="About Institute" className="about-img" />
                         </div>
                         <div className="experience-badge">
                             <span className="years">15+</span>
