@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Results from '../components/Results';
+import PageBanner from '../components/PageBanner';
 
 const ResultsPage = () => {
     useEffect(() => {
@@ -7,7 +8,8 @@ const ResultsPage = () => {
     }, []);
 
     return (
-        <div style={{ paddingTop: '80px', minHeight: '100vh' }}>
+        <div className="page-wrapper">
+            <PageBanner title="Hall of Fame" subtitle="Celebrating Excellence & Success" />
             <Results />
         </div>
     );

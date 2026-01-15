@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Contact from '../components/Contact';
+import PageBanner from '../components/PageBanner';
 
 const ContactPage = () => {
     useEffect(() => {
@@ -7,7 +8,8 @@ const ContactPage = () => {
     }, []);
 
     return (
-        <div style={{ paddingTop: '80px', minHeight: '100vh' }}>
+        <div className="page-wrapper">
+            <PageBanner title="Contact Us" subtitle="Get in Touch with Our Team" />
             <Contact />
         </div>
     );

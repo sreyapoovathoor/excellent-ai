@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import About from '../components/About';
+import PageBanner from '../components/PageBanner';
 import { siteData } from '../data/siteData';
 import './AboutPage.css';
 import { FaEye, FaLightbulb, FaBullseye, FaCheckCircle } from 'react-icons/fa';
@@ -14,6 +15,8 @@ const AboutPage = () => {
 
     return (
         <div className="about-page-wrapper">
+            <PageBanner title="About Us" subtitle={about.subtitle} />
+
             {/* Main Intro Section */}
             <About />
 

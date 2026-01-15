@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Courses from '../components/Courses';
+import PageBanner from '../components/PageBanner';
 
 const CoursesPage = () => {
     // Scroll to top when page loads
@@ -8,7 +9,8 @@ const CoursesPage = () => {
     }, []);
 
     return (
-        <div style={{ paddingTop: '100px', minHeight: '100vh' }}>
+        <div className="page-wrapper">
+            <PageBanner title="Our Courses" subtitle="Expert Coaching for Medical & Engineering" />
             <Courses />
         </div>
     );

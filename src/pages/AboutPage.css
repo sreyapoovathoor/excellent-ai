@@ -1,5 +1,5 @@
 .about-page-wrapper {
-    padding-top: 80px;
+    /* Padding handled by Banner or relative positioning */
     background: var(--bg-light);
 }
 
